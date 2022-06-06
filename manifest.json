@@ -1,0 +1,19 @@
+{
+  "name": "YouTube Comments Section Analyzer",
+  "version": "1.0",
+  "description": "Find the sentiment of a YouTube video based on it's comments' section",
+  "manifest_version": 3,
+  "icons": {
+    "16": "YouTubeCommentsSectionAnalyzerIcon.png",
+    "48": "YouTubeCommentsSectionAnalyzerIcon.png",
+    "128": "YouTubeCommentsSectionAnalyzerIcon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Comments Section Analyzer",
+    "default_icon": "YouTubeCommentsSectionAnalyzerIcon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

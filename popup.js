@@ -28,6 +28,7 @@ chrome.tabs.query({currentWindow: true, active: true},
     .then((data) =>{ 
         console.log(data)
         document.getElementById('reload-message').style.display = 'none';
+        document.getElementById('api-error').style.display = 'none';
         document.getElementById('initial content').style.display = 'none';
         document.getElementById('sentiment-analysis').style.display = 'block';
         document.getElementById('results').innerHTML = "Results:- ";
@@ -38,6 +39,12 @@ chrome.tabs.query({currentWindow: true, active: true},
         document.getElementById('comments-analyzed5').innerHTML = data["People who thought it negative"];
         document.getElementById('comments-analyzed6').innerHTML = data["People who thought it was positive"];
   })
-  .catch((e)=>console.log(e))
-    }catch{}
+  .catch((e)=>{
+        document.getElementById('api-error').style.display = 'block';
+        document.getElementById('initial content').style.display = 'none';
+  })
+    }catch{
+        document.getElementById('reload-message').style.display = 'block';
+        document.getElementById('initial content').style.display = 'none';
+    }
   });
